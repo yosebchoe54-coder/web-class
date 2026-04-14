@@ -1,23 +1,218 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이예준의 소개 페이지</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>/*
+STEP 1. 페이지 전체 기본 스타일
+- 배경색, 기본 글자색, 글꼴, 여백 초기화
+*/
+body {
+   background-color: red; 
+   color: white; 
+   font-family: 'Noto Sans KR', sans-serif; 
+   margin: 10; 
+   padding: 30; 
+}
+
+/*
+STEP 2. 전체 내용을 감싸는 박스
+- 가운데 정렬 + 최대 너비
+*/
+#wrapper {
+   max-width: 680px; 
+   margin: 60px auto; 
+   padding: 0 20px; 
+}
+
+/* STEP 3. 맨 위 소개 박스 */
+.header {
+   background-color: #1d4ed8; 
+  border-radius: 30px; 
+   padding: 40px 32px; 
+   text-align: center; 
+   margin-bottom: 20px; 
+}
+
+/* STEP 4. 이모지 크게 만들기 */
+.avatar-emoji {
+   font-size: 60px; 
+   display: block; 
+   margin-bottom: 15px; 
+}
+
+/* STEP 5. 헤더 안 제목 */
+.header h1 {
+   font-family: 'Black Han Sans', sans-serif; 
+   font-size: 50px; 
+   color: #ffffff; 
+   margin-bottom: 6px; 
+}
+
+/* STEP 6. 헤더 안 소개글 */
+.header p {
+  /* font-size: 14px; */
+  /* color: #bfdbfe; */
+  /* line-height: 1.7; */
+}
+
+/* STEP 7. 카드 공통 스타일 */
+.card {
+  /* background-color: #ffffff; */
+  /* border: 1px solid #bfdbfe; */
+  /* border-top: 4px solid #1d4ed8; */
+  /* border-radius: 12px; */
+  /* padding: 24px; */
+  /* margin-bottom: 16px; */
+}
+
+/* STEP 8. 카드 제목 스타일 */
+.card h2 {
+  /* font-family: 'Black Han Sans', sans-serif; */
+  /* font-size: 17px; */
+  /* color: #1d4ed8; */
+  /* margin-bottom: 14px; */
+  /* padding-bottom: 10px; */
+  /* border-bottom: 1px solid #dbeafe; */
+}
+
+/* STEP 9. 카드 안 기본 문단 */
+.card p {
+  /* font-size: 14px; */
+  /* line-height: 1.9; */
+  /* color: #374151; */
+}
+
+/* STEP 10. 기본 정보 한 줄씩 꾸미기 */
+.info-row {
+  /* padding: 10px 0; */
+  /* border-bottom: 1px solid #eff6ff; */
+  /* font-size: 14px; */
+  /* color: #374151; */
+}
+
+.info-row:last-child {
+  /* border-bottom: none; */
+}
+
+.info-label {
+  /* font-weight: 700; */
+  /* color: #1d4ed8; */
+  /* margin-right: 8px; */
+}
+
+/* STEP 11. 기술 태그를 알약 모양으로 */
+.tag {
+  /* display: inline-block; */
+  /* background-color: #dbeafe; */
+  /* color: #1d4ed8; */
+  /* font-size: 12px; */
+  /* font-weight: 700; */
+  /* padding: 4px 12px; */
+  /* border-radius: 20px; */
+  /* border: 1px solid #bfdbfe; */
+  /* margin: 0 6px 8px 0; */
+}
+
+/* STEP 12. 좋아하는 것 목록 */
+.styled-list {
+  /* padding-left: 20px; */
+  /* margin: 8px 0; */
+}
+
+.styled-list li {
+  /* font-size: 14px; */
+  /* line-height: 2; */
+  /* color: #374151; */
+}
+
+.styled-list li::marker {
+  /* color: #1d4ed8; */
+}
+
+/* STEP 13. 링크를 버튼처럼 */
+.link-btn {
+  /* display: block; */
+  /* background-color: #eff6ff; */
+  /* color: #1d4ed8; */
+  /* text-decoration: none; */
+  /* font-size: 14px; */
+  /* font-weight: 700; */
+  /* padding: 12px 18px; */
+  /* border-radius: 10px; */
+  /* border: 1.5px solid #bfdbfe; */
+  /* margin-bottom: 10px; */
+}
+
+/* STEP 14. 맨 아래 푸터 */
+#footer {
+  /* text-align: center; */
+  /* font-size: 12px; */
+  /* color: #93c5fd; */
+  /* padding: 24px 0 48px; */
+}</style>
 </head>
 <body>
-    <h1>안녕하세요</h1>
-    <p>저는 이예준 입니다 웹개발을 배우고 있어요</p>
-    <a href="https://naver.com" target=""_blank">새탭으로 열기</a>>
-    <img src="e795d907a016d28cb1c744813099afbf.jpg" alt="사진설명">
-<ul>
-  <li>사과00000</li>
-  <li>바나나</li>
-  <li>딸기</li>
-</ul>
-<ol>
-  <li>HTML 배우기</li>
-  <li>CSS 배우기</li>
-  <li>JS 배우기</li>
-</ol>
+
+<div id="wrapper">
+  <div class="header">
+    <span class="avatar-emoji">🙋</span>
+    <h1>최요셉</h1>
+    <p>○○고등학교 2학년<br>HTML과 CSS를 배우고 있어요 👨‍💻</p>
+  </div>
+
+  <div class="card">
+    <h2>📋 기본 정보</h2>
+    <div class="info-row"><span class="info-label">이름</span>홍길동</div>
+    <div class="info-row"><span class="info-label">학교</span>대구 ○○고등학교</div>
+    <div class="info-row"><span class="info-label">학년</span>2학년</div>
+    <div class="info-row"><span class="info-label">관심 분야</span>웹개발, UI 디자인</div>
+    <div class="info-row"><span class="info-label">GitHub</span><a href="https://github.com/내아이디">github.com/내아이디</a></div>
+  </div>
+
+  <div class="card">
+    <h2>👋 자기소개</h2>
+    <p>
+      안녕하세요! 웹개발에 관심이 생겨 HTML과 CSS를 공부하고 있는 홍길동입니다.<br>
+      처음에는 어렵게 느껴졌지만, 코드를 짜면서 눈앞에 결과물이 바로 나타나는 게
+      너무 재미있어서 열심히 배우고 있습니다.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>❤️ 좋아하는 것들</h2>
+    <ul class="styled-list">
+      <li>음악 듣기 🎵</li>
+      <li>게임 하기 🎮</li>
+      <li>친구들과 카페 가기 ☕</li>
+      <li>유튜브 보기 📺</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>💻 배우고 있는 기술</h2>
+    <div>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Flexbox</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">VS Code</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔗 링크</h2>
+    <a class="link-btn" href="https://github.com/내아이디" target="_blank">🐙 GitHub 프로필 보기</a>
+    <a class="link-btn" href="https://내아이디.github.io/web-class" target="_blank">🌐 내 웹페이지 보기</a>
+  </div>
+</div>
+
+<div id="footer">
+  이 페이지는 HTML과 CSS로 만들었습니다 🎨<br>
+  Made by 홍길동
+</div>
+</body>
 </html>
